@@ -1,0 +1,78 @@
+
+<body>
+
+    <div class="container">
+  
+        <div class="card text-white bg-dark mb-3">
+  
+            <h2 class="text-center fw-bold">ADD-TASK</h2>
+            <p class="text-center">Add your task here!....</p>
+  
+            <section>
+              <div class="form">
+                <form [formGroup]="formValue">
+              
+                    <div class="mb-3">
+                        <label for="task_name" class="form-label" style="font-size: 20px;">Task Name</label>
+                        <input type="text" class="form-control" id="name" formControlName="T_name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="task_id" class="form-label" style="font-size: 20px;">Task Id</label>
+                        <input type="number" class="form-control" id="task_id" formControlName="T_id">
+                      </div>
+                      <div class="mb-3">
+                        <label for="task_status" class="form-label" style="font-size: 20px;">Task Status</label>
+                        <input type="text" class="form-control" id="task_status" formControlName="T_status">
+                      </div>
+                      <div class="mb-3">
+                        <label for="start_time" class="form-label"style="font-size: 20px;">Start Time</label>
+                        <input type="time" class="form-control" id="start_time" formControlName="Start_tym">
+                      </div>
+                      <div class="mb-3">
+                        <label for="end_time" class="form-label"style="font-size: 20px;">End Time</label>
+                        <input type="time" class="form-control" id="end_time" formControlName="End_tym">
+                      </div>
+                      <div class="mb-3">
+                        <label for="created_date" class="form-label"style="font-size: 20px;">Created Date</label>
+                        <input type="date" class="form-control" id="created_date" formControlName="Create_date">
+                      </div>
+                      <div class="mb-3">
+                        <label for="assigned_manager" class="form-label"style="font-size: 20px;">Assigned Manager</label>
+                        <input type="text" class="form-control" id="assigned_manager" formControlName="Assigned_manager">
+                      </div>
+                      <div class="mb-3">
+                        <label for="task_description" class="form-label"style="font-size: 20px;">Task Description</label>
+                        <input type="text" class="form-control" id="task_description" formControlName="T_description">
+                      </div>
+                      <div class="mb-3">
+                        <button type="submit"  class="btn btn-primary" (click)="add()" >Submit</button>
+                      </div>
+                   
+                    
+                </form>
+  
+  
+  
+  
+              </div>
+  
+  
+            </section>
+  
+  
+  
+        </div>
+  
+  
+  
+  
+  
+    </div>
+  
+  
+  
+  
+  
+  
+  
+  </body>

@@ -1,0 +1,41 @@
+
+   <div class="input-group">
+      <div class="form-outline ms-2">
+         <label style="font-weight: 700;"  class="form-label" for="form1">Search</label>
+        <input type="search" id="form1" class="form-control"[(ngModel)]="searchText" placeholder="Enter text to search"  />
+      </div>
+      </div>
+
+<h2 style="text-align:center;" >Task Details</h2>
+<table class="table table-bordered ">
+   <thead>
+    <tr>
+       <th>Task Name</th>
+       <th>Task id</th>
+       <th>Status</th>
+       <th>Start time</th>
+       <th>End time</th>
+       <th>Created Date</th>
+       <th>Approval Status</th>
+       <th>Assigned Manager</th>
+       <th>Task Description</th>
+       <th>Delete</th>
+    </tr>
+   </thead>
+  
+  
+   <tbody>
+   <tr *ngFor="let item of tasklist | pipe: searchText; index as i">
+       <td>{{item.T_name}}</td>
+       <td>{{item.T_id}}</td>
+       <td>{{item.T_status}}</td>
+       <td>{{item.Start_tym}}</td>
+       <td>{{item.End_tym}}</td>
+       <td>{{item.Create_date}}</td>
+       <td>{{item.Approval_status}}</td>
+       <td>{{item.Assigned_manager}}</td>
+       <td>{{item.T_description}}</td>
+       <td><button (click)="deleteuser(item)">delete</button></td>
+   </tr>
+</tbody>
+</table>
